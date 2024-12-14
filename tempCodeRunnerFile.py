@@ -35,7 +35,8 @@ async def download_video(link: str = Form(...)):
             "outtmpl": os.path.join(download_dir, filename)
         }
 
-        # Download the video
+        # Download the videopip install --upgrade yt-dlp
+
         with yt_dlp.YoutubeDL(youtube_dl_options) as ydl:
             ydl.download([link])
         
